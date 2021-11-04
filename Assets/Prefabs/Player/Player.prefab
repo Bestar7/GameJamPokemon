@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 9215830932195261009}
   - component: {fileID: 9215830932195261008}
   - component: {fileID: 3074106594191137839}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Flashlight Autre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9215830932535355475}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Flashlight Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
