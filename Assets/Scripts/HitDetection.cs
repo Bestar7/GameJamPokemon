@@ -14,6 +14,7 @@ public class HitDetection: MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (playerLayer != (playerLayer | 1 << other.gameObject.layer)) return;
+        Destroy(other.gameObject);
     }
 
     /*
