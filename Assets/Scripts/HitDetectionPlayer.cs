@@ -5,14 +5,11 @@ using UnityEngine;
 public class HitDetectionPlayer : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public void OnTriggerStay2D(Collider2D collision)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
     }
 }
