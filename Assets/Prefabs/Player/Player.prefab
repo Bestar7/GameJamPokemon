@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9215830931344395551}
-  m_Layer: 0
+  - component: {fileID: 696047531}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,6 +32,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &696047531
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215830931344395552}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.45}
+  m_Size: {x: 0.57, y: 1}
+  m_Direction: 0
 --- !u!1 &9215830931658352488
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9215830931658352487}
   - component: {fileID: 9215830931658352486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flashlight Light Wide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9215830931874915508}
   - component: {fileID: 9215830931874915507}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9215830932017451534}
   - component: {fileID: 9215830932017451533}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flashlight Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9215830932195261009}
   - component: {fileID: 9215830932195261008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flashlight Autre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9215830932493353610}
   - component: {fileID: 9215830932493353609}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9215830932535355475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flashlight Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -447,7 +464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9215830932663053125}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Light Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9215830932947909210}
   - component: {fileID: 9215830932947909209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MakeLightVisible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9215830933117217744}
   - component: {fileID: 9215830933117217743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MakeLightVisible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
