@@ -21,7 +21,7 @@ public class Move : MonoBehaviour
 
     }
 
-    void Update()
+    void Update() // TODO synchro movement (input) et annimation
     {
         if (Input.GetButtonDown("Jump") && isGroundBelow)
         {
