@@ -125,21 +125,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-    "com.unity.sysroot": {
-      "version": "0.1.19-preview",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.sysroot.linux-x86_64": {
-      "version": "0.1.14-preview",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.sysroot": "0.1.18-preview"
-=======
     "com.unity.render-pipelines.core": {
       "version": "10.6.0",
       "depth": 1,
@@ -174,7 +159,22 @@
       "dependencies": {
         "com.unity.render-pipelines.core": "10.6.0",
         "com.unity.searcher": "4.3.2"
->>>>>>> be77cddf30ca5a8f9fc48b286cff28a882b42309
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.sysroot": {
+      "version": "0.1.19-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.sysroot.linux-x86_64": {
+      "version": "0.1.14-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "0.1.18-preview"
       },
       "url": "https://packages.unity.com"
     },
