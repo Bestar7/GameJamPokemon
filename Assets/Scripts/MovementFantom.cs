@@ -11,7 +11,8 @@ public class MovementFantom: MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if(target)
+            Move();
     }
 
     private void Start()

@@ -5,7 +5,6 @@ using Random = UnityEngine.Random;
 public class HitDetection: MonoBehaviour
 {
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private Object spawnedObject;
 
     public void OnTriggerStay2D(Collider2D collision)
     {

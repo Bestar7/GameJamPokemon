@@ -27,7 +27,7 @@ public class FantomManager : MonoBehaviour
         while (count < max)
         {
             yield return new WaitForSeconds(interval);
-            Instantiate(spawnedObject, new Vector3(Random.Range(-5f, 5f), 6), transform.rotation);
+            Instantiate(spawnedObject, new Vector3(Random.Range(-5f, 5f), 76), transform.rotation);
             count++;
         }
     }

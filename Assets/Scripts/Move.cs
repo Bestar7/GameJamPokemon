@@ -5,11 +5,11 @@ public class Move : MonoBehaviour
 
     [SerializeField] private GroundCheckBase raycastGroundCheck;
 
-    public bool isGroundBelow;
-    public float jumpForce;
-    public float speed;
-    Rigidbody2D rb;
-    public bool flashEnable;
+    private bool isGroundBelow;
+    [SerializeField] private float jumpForce;
+    [SerializeField]  private float speed;
+    private Rigidbody2D rb;
+    [SerializeField]  private bool flashEnable;
 
     void Start()
     {

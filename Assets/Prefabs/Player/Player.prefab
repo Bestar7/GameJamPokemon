@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9215830931344395551}
   - component: {fileID: 696047531}
+  - component: {fileID: 1112762664}
+  - component: {fileID: 1112762662}
+  - component: {fileID: 1112762663}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -26,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 9215830931344395552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.172, y: 0.092, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 9215830931874915508}
   m_Father: {fileID: 0}
@@ -41,13 +44,72 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 9215830931344395552}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7dd54a126106fe84ca38419e07a17284, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.45}
   m_Size: {x: 0.57, y: 1}
   m_Direction: 0
+--- !u!50 &1112762664
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215830931344395552}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &1112762662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215830931344395552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efea33ac7c344404eaa5bc25a0fae543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rays:
+  - origin: {x: -0.29, y: 0.46}
+    direction: {x: 0, y: -1.03}
+    distance: 0.6
+  - origin: {x: 0.29, y: 0.42}
+    direction: {x: 0, y: -1}
+    distance: 0.6
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &1112762663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215830931344395552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7c7710d635e0040b621a9f3b91e8db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastGroundCheck: {fileID: 1112762662}
+  jumpForce: 8
+  speed: 6
+  flashEnable: 0
 --- !u!1 &9215830931874915509
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +219,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9215830932195261010}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.6999161, w: 0.71422505}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -189,10 +251,10 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 30
+  m_PointLightInnerAngle: 31
   m_PointLightOuterAngle: 50
-  m_PointLightInnerRadius: 1.2711078
-  m_PointLightOuterRadius: 1.6466713
+  m_PointLightInnerRadius: 3.59
+  m_PointLightOuterRadius: 9.216332
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -230,9 +292,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.5510645, y: 1.447241}
-      - {x: 0.03514936, y: 1.5353483}
-      - {x: -0.49551558, y: 1.4132543}
+    - - {x: 1.9808227, y: 4.320639}
+      - {x: -0.020375632, y: 4.852943}
+      - {x: -1.9946802, y: 4.369939}
       - {x: 0.0032112598, y: 0.029559433}
 --- !u!1 &9215830932493353611
 GameObject:
@@ -258,7 +320,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9215830932493353611}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7203259, w: 0.6936358}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -290,10 +352,10 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 310
-  m_PointLightOuterAngle: 330
-  m_PointLightInnerRadius: 0.46629068
-  m_PointLightOuterRadius: 0.7789257
+  m_PointLightInnerAngle: 311.99
+  m_PointLightOuterAngle: 331.99
+  m_PointLightInnerRadius: 0.9376073
+  m_PointLightOuterRadius: 1.3221676
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
