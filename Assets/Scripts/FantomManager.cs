@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FantomManager : MonoBehaviour
@@ -11,7 +10,6 @@ public class FantomManager : MonoBehaviour
     [SerializeField] private float distance;
 
     private int count = 0;
-    private LinkedList<Vector3> spawnPoints;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +33,7 @@ public class FantomManager : MonoBehaviour
             Instantiate(spawnedObject, vect, transform.rotation);
             count++;
         }
+        StopCoroutine(CreateFantom());
     }
 
     private void Create()
