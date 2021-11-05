@@ -49,26 +49,19 @@ public class Move : MonoBehaviour
 
         isGroundBelow = raycastGroundCheck.isGrounded();
 		animator.SetBool("isGrounded", isGroundBelow);
-        float x = Input.GetAxis("Horizontal");
-        if (x != 0)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
-        if (x < 0)
+        float xAxis = Input.GetAxis("Horizontal");
+
+		animator.SetBool("isRunning", (xAxis != 0) );
+
+        if (xAxis < 0)
         {
             transform.localScale = new Vector3(-2, 2, 2);
-          
         }
-        else if (x>0)
+        else if (xAxis > 0)
         {
             transform.localScale = new Vector3(2, 2, 2);
-          
         }
-        Vector3 move = new Vector3(x * speed, rb.velocity.y, 0f);
+        Vector3 move = new Vector3(xAxis * speed, rb.velocity.y, 0f);
         rb.velocity = move;
     }
 }
