@@ -124,7 +124,7 @@ Transform:
   m_Children:
   - {fileID: 1460692381}
   m_Father: {fileID: 8928738254600641190}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1997665312
 MonoBehaviour:
@@ -409,83 +409,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &4074188449061612136
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1931499303507583451}
-  - component: {fileID: 7384795796698391659}
-  m_Layer: 0
-  m_Name: Inventaire
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1931499303507583451
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4074188449061612136}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -169.22, y: -12.903526, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8928738254600641190}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7384795796698391659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4074188449061612136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f8ca0d21107df442b61b765807139b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  batteryLeft: 3
-  WaintingTimePerCharge: 1
-  pourcentFlashLight: 100
-  isFlashLightOn: 0
-  OnChangeFlashLight:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 425166099527430490}
-        m_TargetAssemblyTypeName: ImageValue, Assembly-CSharp
-        m_MethodName: UpdateImage
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnBatteryEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1387699585}
-        m_TargetAssemblyTypeName: TextValue, Assembly-CSharp
-        m_MethodName: UpdateText
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &5004473314787332473
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,16 +537,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8ca0d21107df442b61b765807139b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batteryLeft: 1
-  WaintingTimePerCharge: 0
-  pourcentFlashLight: 5
+  batteryLeft: 3
+  WaintingTimePerCharge: 1
+  pourcentFlashLight: 100
   isFlashLightOn: 0
   OnChangeFlashLight:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 425166099527430490}
+        m_TargetAssemblyTypeName: ImageValue, Assembly-CSharp
+        m_MethodName: UpdateImage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnBatteryEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1387699585}
+        m_TargetAssemblyTypeName: TextValue, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3090593877707861666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,7 +1157,6 @@ Transform:
   m_Children:
   - {fileID: 5004473314787332422}
   - {fileID: 2115583798735934637}
-  - {fileID: 1931499303507583451}
   - {fileID: 1997665313}
   m_Father: {fileID: 0}
   m_RootOrder: 0
