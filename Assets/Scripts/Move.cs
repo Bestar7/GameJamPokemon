@@ -25,7 +25,7 @@ public class Move : MonoBehaviour
 
     void Update() // TODO synchro movement (input) et annimation
     {
-        if ((Input.GetButtonDown("Jump") || (Input.GetButtonDown("Up")) && isGroundBelow)
+        if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("Up")) && isGroundBelow)
         {
 			animator.ResetTrigger("isJumping");
 			rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
