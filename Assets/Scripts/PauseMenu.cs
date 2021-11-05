@@ -31,7 +31,6 @@ public class PauseMenu : MonoBehaviour
 
 	private void Restart() // TODO VERIFIER CECI
 	{
-		throw new NotImplementedException();
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
 	}
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1112762662}
   - component: {fileID: 96111483}
   - component: {fileID: 1479863575}
+  - component: {fileID: 96111487}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -130,6 +131,39 @@ MonoBehaviour:
   speedDecreaseBySec: 1
   pourcentFlashLight: 5
   isFlashLightOn: 0
+--- !u!114 &96111487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215830931344395552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea017c595a787c4ba5c48a99b171da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phantomLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4955254209029404629, guid: 122b9f72301d80c42b3fad878519b267, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: 
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &9215830931874915509
 GameObject:
   m_ObjectHideFlags: 0
