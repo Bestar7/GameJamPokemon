@@ -15,7 +15,8 @@ public class HitDetection: MonoBehaviour
         if (phantomLayer != (phantomLayer | 1 << other.gameObject.layer)) return;
         if (other.IsTouchingLayers(playerLayer))
         {
-            OnDeath?.Invoke();
+			Debug.Log(OnDeath.GetPersistentEventCount()+"  "+ OnDeath.GetPersistentMethodName(0));
+			OnDeath?.Invoke();
             Destroy(transform.gameObject);
         }
     }

@@ -21,6 +21,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 	{
 		if (Input.GetButtonDown("Cancel") && SceneManager.GetActiveScene().buildIndex != 0) // on fait pause hors du menu principal
 		{
+			Debug.Log("cancel pressed in update");
 			isMenuOpen = !isMenuOpen;
 			pausePanel.SetActive(isMenuOpen);
 			if (isMenuOpen)
@@ -34,6 +35,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 	public void Continue()
 	{
 		isMenuOpen = false;
+		diePanel.SetActive(false);
 		pausePanel.SetActive(isMenuOpen);
 		Time.timeScale = 1;
 	}
@@ -61,15 +63,19 @@ public class GameManager : SingletonBehaviour<GameManager>
 	public void ContinueProgress()
 	{
 		mainMenuPanel.SetActive(false);
+		Debug.Log("ContinueProgress()");
 		int progress = PlayerPrefs.GetInt(KEY_CURRENT_LEVEL);
 		SceneManager.LoadSceneAsync(progress);
 	}
 
 
 	// Death Panel
-	public void OnDeath()
+	public void OnPlayerDeath()
 	{
-		diePanel.SetActive(true);
+		if (this == instance)
+			diePanel.SetActive(true);
+		else
+			instance.diePanel.SetActive(true);
 	}
 
 }
