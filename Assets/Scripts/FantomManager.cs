@@ -35,6 +35,7 @@ public class FantomManager : MonoBehaviour
             Instantiate(spawnedObject, vect, transform.rotation);
             count++;
         }
+        StopCoroutine(CreateFantom());
     }
 
     private void Create()
