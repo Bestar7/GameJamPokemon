@@ -1,47 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PassengerController : MonoBehaviour
 {
-    
+    private const string KEY_CURRENT_LEVEL = "currentLevel";
+    [SerializeField] private int offsetLevel;
     private bool isEntered;
     // Start is called before the first frame update
-
+    
     public void Start()
     {
         
     }
 
-    public void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         isEntered = true;
 
     }
-    public void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         isEntered = false;
 
     }
 
-    public void Update()
+    private void Update()
     {
         if (Input.GetKeyDown("up") && isEntered)
         {
-
-            Debug.Log("Je dans la porte mon gars !");
+            GoToLevel();
+            
         }
     }
 
 
-    private void Next()
+    private void GoToLevel()
     {
-
+        int nextScene = SceneManager.GetActiveScene().buildIndex + offsetLevel;
+        PlayerPrefs.SetInt(KEY_CURRENT_LEVEL, nextScene);
+        PlayerPrefs.Save();
+        SceneManager.LoadSceneAsync(nextScene);
     }
 
-    private void Previous()
-    {
-
-    }
+   
 }
