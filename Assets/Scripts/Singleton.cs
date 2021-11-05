@@ -8,10 +8,16 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
 
     protected virtual void Awake()
     {
-        if (!_instance)
-        {
-            _instance = (T)this;
-            DontDestroyOnLoad(this);
-        }
+		if (!_instance)
+		{
+			_instance = (T)this;
+			DontDestroyOnLoad(this);
+			if (transform != null)
+				DontDestroyOnLoad(transform.gameObject);
+		}
+		else {
+			Debug.Log(this.name + " singleton est déjà présent, suppression du plus récent");
+			Destroy(transform.gameObject);
+		}
     }
 }
