@@ -41,6 +41,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 	public void RestartLevel()
 	{
 		Continue();
+		diePanel.SetActive(false);
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 	}
 
@@ -65,18 +66,10 @@ public class GameManager : SingletonBehaviour<GameManager>
 	}
 
 
-	// PORATL METHOD
-	public void PreviousLevel()
+	// Death Panel
+	public void OnDeath()
 	{
-		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
-	}
-
-	public void NextLevel()
-	{
-		int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-		PlayerPrefs.SetInt(KEY_CURRENT_LEVEL, nextScene);
-		PlayerPrefs.Save();
-		SceneManager.LoadSceneAsync(nextScene);
+		diePanel.SetActive(true);
 	}
 
 }
