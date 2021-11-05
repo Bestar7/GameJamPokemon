@@ -225,7 +225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 44}
+  m_AnchoredPosition: {x: -18, y: -14}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746471531
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -539368960687019306, guid: 18023d9b56fa4d040a3102040c325c4f, type: 3}
+  m_Sprite: {fileID: -773844512500955763, guid: 18023d9b56fa4d040a3102040c325c4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -616,7 +616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 115, y: -5}
+  m_AnchoredPosition: {x: 130, y: 3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743148148
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ZE FANTOMEEEE
+  m_text: THE PHAN-TOME
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4729b1218fbd2334695b7d5330eca768, type: 2}
   m_sharedMaterial: {fileID: -1419305945137470518, guid: 4729b1218fbd2334695b7d5330eca768, type: 2}
@@ -666,8 +666,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 95.14
+  m_fontSizeBase: 95.14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -702,7 +702,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -137.54678, y: -121.14215, z: 95.904236, w: 126.18976}
+  m_margin: {x: -358.7038, y: -186.48401, z: -125.25287, w: 126.18976}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Start '
+  m_text: New game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4729b1218fbd2334695b7d5330eca768, type: 2}
   m_sharedMaterial: {fileID: -1419305945137470518, guid: 4729b1218fbd2334695b7d5330eca768, type: 2}
