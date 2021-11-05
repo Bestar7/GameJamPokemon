@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 96111483}
   - component: {fileID: 1479863575}
   - component: {fileID: 1186063333506364155}
+  - component: {fileID: 5569431743465906388}
   m_Layer: 6
   m_Name: Player 1
   m_TagString: Untagged
@@ -150,6 +151,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashlight: {fileID: 9215830932535355475}
+--- !u!114 &5569431743465906388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215830931344395552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea017c595a787c4ba5c48a99b171da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phantomLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4573146888706592365, guid: ed15f3973c0727848af0e595d4c70c9b, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9215830931874915509
 GameObject:
   m_ObjectHideFlags: 0
