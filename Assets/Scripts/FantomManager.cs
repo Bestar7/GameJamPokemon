@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterManager : MonoBehaviour
+public class FantomManager : MonoBehaviour
 {
 
     [SerializeField] private float interval;
