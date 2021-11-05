@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Inventary : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
     [SerializeField] private int batteryLeft;
     [SerializeField] private int speedDecreaseBySec;
