@@ -19,13 +19,11 @@ public class Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         flashEnable = false;
-        
-
     }
 
     void Update() // TODO synchro movement (input) et annimation
     {
-        if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("Up")) && isGroundBelow)
+        if ((Input.GetButtonDown("Jump") ) && isGroundBelow)
         {
 			animator.ResetTrigger("isJumping");
 			rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
