@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1215093283893055621}
   - component: {fileID: 1215093283893055623}
   - component: {fileID: 1215093283893055672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Phantom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146,7 +146,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  target: {fileID: 0}
+  target: {fileID: 9215830931344395551, guid: 07f2267d559044a4094b50effc53cbd5, type: 3}
+  layerFlash:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &1215093283893055672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,4 +165,3 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  spawnedObject: {fileID: 1215093283893055618}
