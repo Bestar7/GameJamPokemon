@@ -41,23 +41,23 @@ public class Inventory : MonoBehaviour
 
     public IEnumerator DecreaseFlashLight(int speed)
     {
-        Debug.Log("Starting Coroutine");
+        
         while (true)
         {
-            Debug.Log("tourning Coroutine");
+            
             if (isFlashLightOn && batteryLeft >= 0)
             {
-                Debug.Log(pourcentFlashLight);
+                
                 pourcentFlashLight--;
                 OnChangeFlashLight?.Invoke(pourcentFlashLight);
                 OnBatteryEvent?.Invoke(batteryLeft);
-                Debug.Log("Double Invoke");
+                
                 if (pourcentFlashLight <= 0 && batteryLeft > 0)
                 {
                   
                     ReloadFlashLight();
 
-                    Debug.Log("Reloaded Coroutine");
+                 
 
 
                 }
@@ -73,7 +73,7 @@ public class Inventory : MonoBehaviour
 
     public void ReloadFlashLight()
     {
-        Debug.Log("Reloaded");
+      
         batteryLeft--;
         pourcentFlashLight = 100;
     }
