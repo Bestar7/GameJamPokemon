@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batteryLeft: 3
   speedDecreaseBySec: 1
-  pourcentFlashLight: 0
+  pourcentFlashLight: 100
   isFlashLightOn: 0
 --- !u!1 &9215830931344395552
 GameObject:

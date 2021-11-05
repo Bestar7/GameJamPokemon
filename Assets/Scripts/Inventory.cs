@@ -10,11 +10,15 @@ public class Inventory : MonoBehaviour
     [SerializeField] private float pourcentFlashLight;
     public bool isFlashLightOn;
 
-      public void Start()
+    public void Start()
     {
-        pourcentFlashLight = 100;
+		// on met 100% de batterie uniquement si le joueur commence avec des batteries et sans energie présente
+		if (pourcentFlashLight == 0 && batteryLeft >= 1) 
+		{
+			batteryLeft--;
+			pourcentFlashLight = 100;
+		}
         StartCoroutine(DecreaseFlashLight(speedDecreaseBySec));
-
     }
 
    
