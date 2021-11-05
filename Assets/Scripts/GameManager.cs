@@ -14,15 +14,19 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     public void StartGame()
     {
-        Debug.Log("I start the game");
         Time.timeScale = 1;
-        SceneManager.LoadScene(startScene);
+        SceneManager.LoadScene(1);
     }
 
     public void Continue()
     {
         panelPause.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void Restart()
