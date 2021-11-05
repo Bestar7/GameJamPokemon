@@ -63,7 +63,6 @@ public class GameManager : SingletonBehaviour<GameManager>
 	public void ContinueProgress()
 	{
 		mainMenuPanel.SetActive(false);
-		Debug.Log("ContinueProgress()");
 		int progress = PlayerPrefs.GetInt(KEY_CURRENT_LEVEL);
 		SceneManager.LoadSceneAsync(progress);
 	}
