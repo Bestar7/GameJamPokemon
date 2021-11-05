@@ -7,42 +7,31 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 	[SerializeField] GameObject panel;
-	private bool isGettingInMenu = false;
+	private bool isMenuOpen { get; set; } 
 
-	// Update is called once per frame
-	void Update()
+	private void Awake()
+	{
+		//Instantiate(panel);
+		isMenuOpen = false;
+	}
+
+	private void Update()
 	{
 		if (Input.GetButtonDown("Cancel"))
 		{
-			isGettingInMenu = !isGettingInMenu;
-			panel.SetActive(isGettingInMenu);
-			if (isGettingInMenu)
+			isMenuOpen = !isMenuOpen;
+			panel.SetActive(isMenuOpen);
+			if (isMenuOpen)
 				Time.timeScale = 0;
 			else
 				Time.timeScale = 1;
 		}
 	}
 
-	private void Continue()
+	public void Continue()
 	{
-		panel.SetActive(true);
+		isMenuOpen = false;
+		panel.SetActive(isMenuOpen);
 		Time.timeScale = 1;
 	}
-
-	private void Restart() // TODO VERIFIER CECI
-	{
-		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
-	}
-
-	private void Menu() // TODO Implementer Ceci
-	{
-		throw new NotImplementedException();
-	}
-
-	private void Quit()
-	{
-		Debug.Log("Je quitte l'application");
-		Application.Quit();
-	}
-
 }

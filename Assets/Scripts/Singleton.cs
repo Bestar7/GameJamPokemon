@@ -12,6 +12,14 @@ public abstract class SingletonBehaviour<T> : MonoBehaviour where T : SingletonB
         {
             _instance = (T)this;
             DontDestroyOnLoad(this);
+			if (transform != null)
+				DontDestroyOnLoad(transform.gameObject);
         }
+		else
+		{	// TODO pour le menu princpial : commencer par une scene[0] avec uniquement GameManager (on y retourn plus jamais !!!) ; scene[1] est le menu principal
+			Debug.Log(this.name + " singleton est déjà présent => suppression d'un d'eux");
+			if (transform != null)
+				Destroy(transform.gameObject);
+		}
     }
 }
