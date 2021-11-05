@@ -38,7 +38,7 @@ public class Move : MonoBehaviour
             inventory.isFlashLightOn = !inventory.isFlashLightOn;
 			flashEnable = inventory.isFlashLightOn;
         }
-        
+       
     }
 
 	private void ChangeHalo(bool isLightOn)
@@ -52,7 +52,7 @@ public class Move : MonoBehaviour
     void FixedUpdate()
     {
 
-		flashLight?.SetActive(inventory.isFlashLightOn);
+		flashLight?.SetActive(inventory.isFlashLightOn);  
 		ChangeHalo(inventory.isFlashLightOn);
 
 

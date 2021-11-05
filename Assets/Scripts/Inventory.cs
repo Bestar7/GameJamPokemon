@@ -1,17 +1,18 @@
-﻿
-using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private int batteryLeft;
+    [SerializeField] private float batteryLeft;
     [SerializeField] private int speedDecreaseBySec;
     [SerializeField] private float pourcentFlashLight;
     public bool isFlashLightOn;
+    [SerializeField] private FlashLightEvent OnChangeFlashLight;
+    [SerializeField] private BatteryEvent OnBatteryEvent;
 
     public void Start()
     {
+        Debug.Log("first start");
 		// on met 100% de batterie uniquement si le joueur commence avec des batteries et sans energie présente
 		if (pourcentFlashLight == 0 && batteryLeft >= 1) 
 		{
@@ -40,17 +41,25 @@ public class Inventory : MonoBehaviour
 
     public IEnumerator DecreaseFlashLight(int speed)
     {
+        
         while (true)
         {
             
             if (isFlashLightOn && batteryLeft >= 0)
             {
+                
                 pourcentFlashLight--;
-
+                OnChangeFlashLight?.Invoke(pourcentFlashLight);
+                OnBatteryEvent?.Invoke(batteryLeft);
+                
                 if (pourcentFlashLight <= 0 && batteryLeft > 0)
                 {
                   
                     ReloadFlashLight();
+
+                 
+
+
                 }
                 if (pourcentFlashLight <= 0 && batteryLeft <= 0)
                 {
@@ -64,9 +73,11 @@ public class Inventory : MonoBehaviour
 
     public void ReloadFlashLight()
     {
+      
         batteryLeft--;
         pourcentFlashLight = 100;
     }
 
 
 }
+
