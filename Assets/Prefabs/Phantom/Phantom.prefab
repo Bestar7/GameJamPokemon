@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1215093283893055620}
   - component: {fileID: 1215093283893055621}
   - component: {fileID: 1215093283893055623}
-  - component: {fileID: 1215093283893055672}
   m_Layer: 8
   m_Name: Phantom
   m_TagString: Untagged
@@ -150,18 +149,3 @@ MonoBehaviour:
   layerFlash:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &1215093283893055672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215093283893055618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea017c595a787c4ba5c48a99b171da7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64

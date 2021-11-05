@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 696047531}
   - component: {fileID: 1112762664}
   - component: {fileID: 1112762662}
+  - component: {fileID: 96111483}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -141,6 +142,24 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &96111483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215830931344395552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7c7710d635e0040b621a9f3b91e8db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastGroundCheck: {fileID: 1112762662}
+  jumpForce: 8
+  speed: 6
+  inventary: {fileID: 600362113}
+  flashLight: {fileID: 9215830932535355476}
+  animator: {fileID: 3073854204223339470}
 --- !u!1 &9215830931874915509
 GameObject:
   m_ObjectHideFlags: 0
