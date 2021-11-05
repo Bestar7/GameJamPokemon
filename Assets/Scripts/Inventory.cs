@@ -4,7 +4,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private float batteryLeft;
-    [SerializeField] private int speedDecreaseBySec;
+    [SerializeField] private float WaintingTimePerCharge;
     [SerializeField] private float pourcentFlashLight;
     public bool isFlashLightOn;
     [SerializeField] private FlashLightEvent OnChangeFlashLight;
@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
 			batteryLeft--;
 			pourcentFlashLight = 100;
 		}
-        StartCoroutine(DecreaseFlashLight(speedDecreaseBySec));
+        StartCoroutine(DecreaseFlashLight(WaintingTimePerCharge));
     }
 
    
@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour
         return (batteryLeft > 0 || pourcentFlashLight > 0);
     }
 
-    public IEnumerator DecreaseFlashLight(int speed)
+    public IEnumerator DecreaseFlashLight(float wainting)
     {
         
         while (true)
@@ -66,7 +66,7 @@ public class Inventory : MonoBehaviour
                     isFlashLightOn = false;
                 }
             }
-            yield return new WaitForSeconds(speed);
+            yield return new WaitForSeconds(wainting);
 
         }
     }
