@@ -36,7 +36,7 @@ public class Move : MonoBehaviour
             flashEnable = inventary.isFlashLightOn;
 
         }
-        
+       
     }
 
     void FixedUpdate()
