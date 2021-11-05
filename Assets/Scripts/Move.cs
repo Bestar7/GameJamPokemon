@@ -25,10 +25,11 @@ public class Move : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGroundBelow)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+			animator.ResetTrigger("isJumping");
+			rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGroundBelow = false;
             animator.SetTrigger("isJumping");
-        }
+		}
         
         if (Input.GetButtonDown("Fire1") && inventary.CanStartFlashLight())
         {
@@ -47,7 +48,7 @@ public class Move : MonoBehaviour
          
 
         isGroundBelow = raycastGroundCheck.isGrounded();
-        animator.SetBool("isGrounded", isGroundBelow);
+		animator.SetBool("isGrounded", isGroundBelow);
         float x = Input.GetAxis("Horizontal");
         if (x != 0)
         {
