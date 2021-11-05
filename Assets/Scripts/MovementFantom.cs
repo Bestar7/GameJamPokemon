@@ -10,6 +10,7 @@ public class MovementFantom: MonoBehaviour
     [SerializeField] private LayerMask layerFlash;
 
 
+
     private bool _canMove = true;
 
     // Update is called once per frame

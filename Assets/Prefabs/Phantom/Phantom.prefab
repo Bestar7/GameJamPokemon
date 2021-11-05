@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  target: {fileID: 9215830931344395551, guid: 07f2267d559044a4094b50effc53cbd5, type: 3}
+  target: {fileID: 0}
   layerFlash:
     serializedVersion: 2
     m_Bits: 128

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Move : MonoBehaviour
 {
@@ -10,9 +11,10 @@ public class Move : MonoBehaviour
     [SerializeField]  private float speed;
     private Rigidbody2D rb;
     private bool flashEnable;
-    [SerializeField] private Inventary inventary;
+    [SerializeField] private Inventory inventory;
     [SerializeField] private GameObject flashLight;
-    [SerializeField] private Animator animator;
+	[SerializeField] private GameObject playerHalo;
+	[SerializeField] private Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,49 +27,50 @@ public class Move : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGroundBelow)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+			animator.ResetTrigger("isJumping");
+			rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGroundBelow = false;
             animator.SetTrigger("isJumping");
-        }
+		}
         
-        if (Input.GetButtonDown("Fire1") && inventary.CanStartFlashLight())
+        if (Input.GetButtonDown("Fire1") && inventory.CanStartFlashLight())
         {
-            inventary.isFlashLightOn = !inventary.isFlashLightOn;
-            flashEnable = inventary.isFlashLightOn;
-
+            inventory.isFlashLightOn = !inventory.isFlashLightOn;
+			flashEnable = inventory.isFlashLightOn;
         }
        
     }
 
+	private void ChangeHalo(bool isLightOn)
+	{
+		if (isLightOn)
+			playerHalo.GetComponent<Light2D>().intensity = 0.8f;
+		else
+			playerHalo.GetComponent<Light2D>().intensity = 0.3f;
+	}
+
     void FixedUpdate()
     {
 
-       flashLight?.SetActive(inventary.isFlashLightOn);     
-        
-         
+		flashLight?.SetActive(inventory.isFlashLightOn);  
+		ChangeHalo(inventory.isFlashLightOn);
 
-        isGroundBelow = raycastGroundCheck.isGrounded();
-        animator.SetBool("isGrounded", isGroundBelow);
-        float x = Input.GetAxis("Horizontal");
-        if (x != 0)
-        {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
-        }
-        if (x < 0)
+
+		isGroundBelow = raycastGroundCheck.isGrounded();
+		animator.SetBool("isGrounded", isGroundBelow);
+        float xAxis = Input.GetAxis("Horizontal");
+
+		animator.SetBool("isRunning", (xAxis != 0) );
+
+        if (xAxis < 0)
         {
             transform.localScale = new Vector3(-2, 2, 2);
-          
         }
-        else if (x>0)
+        else if (xAxis > 0)
         {
             transform.localScale = new Vector3(2, 2, 2);
-          
         }
-        Vector3 move = new Vector3(x * speed, rb.velocity.y, 0f);
+        Vector3 move = new Vector3(xAxis * speed, rb.velocity.y, 0f);
         rb.velocity = move;
     }
 }
