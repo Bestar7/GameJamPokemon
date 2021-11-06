@@ -12,7 +12,9 @@ public class Inventory : MonoBehaviour
 
 	public void Start()
     {
-        Debug.Log("first start");
+		batteryLeft = PlayerPrefs.GetFloat("batteryLeft", 3);
+		pourcentFlashLight = PlayerPrefs.GetFloat("pourcentFlashLight", 100);
+		Debug.Log("first start");
 		// on met 100% de batterie uniquement si le joueur commence avec des batteries et sans energie présente
 		if (pourcentFlashLight == 0 && batteryLeft >= 1) 
 		{
@@ -22,9 +24,16 @@ public class Inventory : MonoBehaviour
         StartCoroutine(DecreaseFlashLight(WaintingTimePerCharge));
     }
 
-   
+	private void Update()
+	{	
+		// Plus la capacité de trouver une solution plus propre, trop fatigué, issou
+		PlayerPrefs.SetFloat("batteryLeft", batteryLeft);
+		PlayerPrefs.SetFloat("pourcentFlashLight", pourcentFlashLight);
+	}
 
-    public void AddBattery()
+
+
+	public void AddBattery()
     {
         if(batteryLeft <= 3)
         {
