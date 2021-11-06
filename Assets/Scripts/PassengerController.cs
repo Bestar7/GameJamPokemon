@@ -6,7 +6,7 @@ public class PassengerController : MonoBehaviour
     private const string KEY_CURRENT_LEVEL = "currentLevel";
     [SerializeField] private int offsetLevel;
     private bool isEntered;
-	private bool isBonus => transform.name.Contains("Bonus");
+	private bool isBonus => transform.name.Contains("goTo");
     // Start is called before the first frame update
     
     public void Start()
@@ -29,7 +29,7 @@ public class PassengerController : MonoBehaviour
         {
 			Debug.Log(isBonus + "  " + transform.name);
 			if (isBonus)
-				GoToLevelBonus(transform.name);
+				GoToLevelBonus(transform.name.Replace("goTo", ""));
 			else
 				GoToLevel();
         }

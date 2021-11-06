@@ -79,9 +79,15 @@ public class GameManager : SingletonBehaviour<GameManager>
 	public void OnPlayerDeath()
 	{
 		if (this == instance)
+		{
+			Debug.Log("bonne instance");
 			diePanel.SetActive(true);
+		}
 		else
+		{
+			Debug.Log("mauvaise instance : backup");
 			instance.diePanel.SetActive(true);
+		}
 	}
 
 }
