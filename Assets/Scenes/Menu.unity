@@ -217,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 2288035449389242204, guid: ed15f3973c0727848af0e595d4c70c9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NewGame
+      objectReference: {fileID: 0}
     - target: {fileID: 6638381661384407469, guid: ed15f3973c0727848af0e595d4c70c9b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -299,10 +303,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6638381661384407469, guid: ed15f3973c0727848af0e595d4c70c9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7424991791697173220, guid: ed15f3973c0727848af0e595d4c70c9b, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

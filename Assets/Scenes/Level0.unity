@@ -129652,6 +129652,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1460692382, guid: b0948d372be73b949b20e68f7bf80651, type: 3}
+      propertyPath: m_XDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460692382, guid: b0948d372be73b949b20e68f7bf80651, type: 3}
+      propertyPath: m_YDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460692382, guid: b0948d372be73b949b20e68f7bf80651, type: 3}
+      propertyPath: m_ZDamping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7811857553390074842, guid: b0948d372be73b949b20e68f7bf80651, type: 3}
       propertyPath: m_Name
       value: Player

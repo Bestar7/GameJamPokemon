@@ -67,6 +67,13 @@ public class GameManager : SingletonBehaviour<GameManager>
 		SceneManager.LoadSceneAsync(progress);
 	}
 
+	public void NewGame()
+	{
+		mainMenuPanel.SetActive(false);
+		PlayerPrefs.SetInt(KEY_CURRENT_LEVEL,1);
+		SceneManager.LoadSceneAsync(1);
+	}
+
 
 	// Death Panel
 	public void OnPlayerDeath()
