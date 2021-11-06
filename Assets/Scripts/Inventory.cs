@@ -27,8 +27,8 @@ public class Inventory : MonoBehaviour
 	private void Update()
 	{	
 		// Plus la capacité de trouver une solution plus propre, trop fatigué, issou
-		PlayerPrefs.SetFloat("batteryLeft", batteryLeft);
-		PlayerPrefs.SetFloat("pourcentFlashLight", pourcentFlashLight);
+		//PlayerPrefs.SetFloat("batteryLeft", batteryLeft);
+		//PlayerPrefs.SetFloat("pourcentFlashLight", pourcentFlashLight);
 	}
 
 
