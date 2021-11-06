@@ -538,7 +538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batteryLeft: 3
-  WaintingTimePerCharge: 1
+  WaintingTimePerCharge: 0.2
   pourcentFlashLight: 100
   isFlashLightOn: 0
   OnChangeFlashLight:
