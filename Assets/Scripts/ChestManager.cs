@@ -26,8 +26,10 @@ public class ChestManager : MonoBehaviour
 
    public void Update()
     {
-        if (Input.GetKeyDown("up") && isEntered && !isUsed)
+        if (Input.GetKeyDown("down") && isEntered && !isUsed)
         {
+			AudioSource.PlayClipAtPoint(transform.GetComponent<AudioSource>().clip, transform.position);
+
             isUsed = true;
 
             objectInstantie = Instantiate(spawnedObject, transform.position, transform.rotation);
