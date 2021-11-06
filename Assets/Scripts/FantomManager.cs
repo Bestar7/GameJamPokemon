@@ -27,7 +27,9 @@ public class FantomManager : MonoBehaviour
     {
         while (count < max)
         {
-            Vector3 vect = new Vector3(Random.Range(-25, 100), Random.Range(50, -10));
+			//var randDistance = Random.Range(distance - 3, distance + 3);
+			Vector3 vect = new Vector3(Random.Range(-25, 100), Random.Range(50, -10));
+            //vect = randDistance * vect.normalized;
             vect = distance * vect.normalized;
             yield return new WaitForSeconds(interval);
             Instantiate(spawnedObject, vect, transform.rotation);
