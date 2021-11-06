@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using UnityEngine;
 
-    [Serializable]
+[Serializable]
     public struct RaycastRay
     {
     public Vector2 origin;
