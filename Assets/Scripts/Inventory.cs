@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
 	[SerializeField] private FlashLightEvent OnChangeFlashLight;
     [SerializeField] private BatteryEvent OnBatteryEvent;
 
-    public void Start()
+	public void Start()
     {
         Debug.Log("first start");
 		// on met 100% de batterie uniquement si le joueur commence avec des batteries et sans energie présente
