@@ -29,9 +29,11 @@ public class PassengerController : MonoBehaviour
     {
         if (Input.GetKeyDown("down") && isEntered)
         {
+			Debug.Log(isBonus + "  " + transform.name);
 			if (isBonus)
 				GoToLevelBonus(transform.name);
-			GoToLevel();
+			else
+				GoToLevel();
         }
     }
 
