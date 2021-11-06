@@ -28,10 +28,9 @@ public class PassengerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("up") && isEntered)
+        if (Input.GetKeyDown("down") && isEntered)
         {
             GoToLevel();
-            
         }
     }
 
@@ -44,5 +43,8 @@ public class PassengerController : MonoBehaviour
         SceneManager.LoadSceneAsync(nextScene);
     }
 
-   
+	private void GoToLevelBonus(string bonusScene)
+	{
+		SceneManager.LoadSceneAsync(bonusScene);
+	}
 }

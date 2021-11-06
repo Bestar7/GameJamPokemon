@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1460692384}
   - component: {fileID: 1460692383}
   - component: {fileID: 1460692382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1997665313}
   - component: {fileID: 1997665312}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CM vcam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Follow: {fileID: 5004473314787332422}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 7.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 2045582439}
   - component: {fileID: 2045582438}
   - component: {fileID: 1387699585}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 2115583798735934636}
   - component: {fileID: 2115583798735934639}
   - component: {fileID: 2115583798735934638}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Battery Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +969,7 @@ GameObject:
   - component: {fileID: 8562172609421400049}
   - component: {fileID: 6044804102303626015}
   - component: {fileID: 425166099527430490}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,7 +1062,7 @@ GameObject:
   - component: {fileID: 7966694986684486356}
   - component: {fileID: 5123737299743678925}
   - component: {fileID: 796703986792887983}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Battery Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1137,7 +1137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8928738254600641190}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

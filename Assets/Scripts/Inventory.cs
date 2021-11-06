@@ -6,8 +6,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private float batteryLeft;
     [SerializeField] private float WaintingTimePerCharge;
     [SerializeField] private float pourcentFlashLight;
-    public bool isFlashLightOn;
-    [SerializeField] private FlashLightEvent OnChangeFlashLight;
+	public bool isFlashLightOn;
+	[SerializeField] private FlashLightEvent OnChangeFlashLight;
     [SerializeField] private BatteryEvent OnBatteryEvent;
 
     public void Start()
@@ -39,12 +39,11 @@ public class Inventory : MonoBehaviour
         return (batteryLeft > 0 || pourcentFlashLight > 0);
     }
 
-    public IEnumerator DecreaseFlashLight(float wainting)
+    private IEnumerator DecreaseFlashLight(float wainting)
     {
         
         while (true)
         {
-            
             if (isFlashLightOn && batteryLeft >= 0)
             {
                 
@@ -53,31 +52,18 @@ public class Inventory : MonoBehaviour
                 OnBatteryEvent?.Invoke(batteryLeft);
                 
                 if (pourcentFlashLight <= 0 && batteryLeft > 0)
-                {
-                  
                     ReloadFlashLight();
-
-                 
-
-
-                }
                 if (pourcentFlashLight <= 0 && batteryLeft <= 0)
-                {
                     isFlashLightOn = false;
-                }
             }
             yield return new WaitForSeconds(wainting);
-
         }
     }
 
-    public void ReloadFlashLight()
+	private void ReloadFlashLight()
     {
-      
         batteryLeft--;
         pourcentFlashLight = 100;
     }
-
-
 }
 
