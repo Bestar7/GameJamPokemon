@@ -9,6 +9,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 	private const string KEY_CURRENT_LEVEL = "currentLevel";
 	private int progress => PlayerPrefs.GetInt(KEY_CURRENT_LEVEL);
 	private bool isMenuOpen = false;
+	private bool isDieOpen = false;
 
 	private void Start()
 	{
@@ -19,7 +20,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 	// escape to pause
 	private void Update()
 	{
-		if (Input.GetButtonDown("Cancel") && SceneManager.GetActiveScene().buildIndex != 0) // on fait pause hors du menu principal
+		if (!isDieOpen && Input.GetButtonDown("Cancel") && SceneManager.GetActiveScene().buildIndex != 0) // on fait pause hors du menu principal
 		{
 			Debug.Log("cancel pressed in update");
 			isMenuOpen = !isMenuOpen;
@@ -78,13 +79,16 @@ public class GameManager : SingletonBehaviour<GameManager>
 	// Death Panel
 	public void OnPlayerDeath()
 	{
+		
 		if (this == instance)
 		{
+			isDieOpen = true;
 			Debug.Log("bonne instance");
 			diePanel.SetActive(true);
 		}
 		else
 		{
+			instance.isDieOpen = true;
 			Debug.Log("mauvaise instance : backup");
 			instance.diePanel.SetActive(true);
 		}

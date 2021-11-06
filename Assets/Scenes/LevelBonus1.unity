@@ -6260,11 +6260,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!4 &1309154237 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8928738254600641190, guid: b0948d372be73b949b20e68f7bf80651, type: 3}
-  m_PrefabInstance: {fileID: 2085292594}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1478986982
 GameObject:
   m_ObjectHideFlags: 0
@@ -6318,7 +6313,7 @@ PrefabInstance:
     - target: {fileID: 1215093283893055623, guid: 617a0c9c09051764f871503fc97606a7, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1309154237}
+      objectReference: {fileID: 1839401403}
     - target: {fileID: 1215093283893055673, guid: 617a0c9c09051764f871503fc97606a7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6925,6 +6920,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!4 &1839401403 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5004473314787332422, guid: b0948d372be73b949b20e68f7bf80651, type: 3}
+  m_PrefabInstance: {fileID: 2085292594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1843699372
 GameObject:
   m_ObjectHideFlags: 0
