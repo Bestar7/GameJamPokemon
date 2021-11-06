@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-using Random = UnityEngine.Random;
 
 
 public class HitDetection: MonoBehaviour
