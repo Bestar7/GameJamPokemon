@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2af21a14c21fbc4e82abe3b0defbd48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 2.7
   target: {fileID: 0}
   layerFlash:
     serializedVersion: 2
