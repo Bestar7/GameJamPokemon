@@ -37,6 +37,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 	{
 		isMenuOpen = false;
 		diePanel.SetActive(false);
+		isDieOpen = false;
 		pausePanel.SetActive(isMenuOpen);
 		Time.timeScale = 1;
 	}
@@ -44,7 +45,6 @@ public class GameManager : SingletonBehaviour<GameManager>
 	public void RestartLevel()
 	{
 		Continue();
-		diePanel.SetActive(false);
 		SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 	}
 
